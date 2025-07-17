@@ -60,7 +60,7 @@ npm run dev
 2. Clone o seu fork para sua máquina:
 
 ```bash
-git clone https://github.com/seu-usuario/ProjetinDoCid.git
+git clone https://github.com/leomatiazzz/ProjetinDoCid.git
 ```
 
 3. Crie uma nova branch para suas alterações:

@@ -24,7 +24,7 @@ export function Sidebar() {
       </div>
 
       {/* Bottom settings */}
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 mb-6">
         <SidebarIcon icon={<Settings size={24} />} label="Configurações" />
         <SidebarIcon icon={<LogOut size={24} />} label="Sair" />
       </div>

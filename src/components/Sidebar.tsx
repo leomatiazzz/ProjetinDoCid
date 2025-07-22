@@ -1,11 +1,13 @@
+// Localização: src/components/Sidebar.tsx (ATUALIZADO)
+
 "use client";
 import { Home, ListChecks, Leaf, Users, Settings, LogOut } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link"; // 1. Importa o Link
 
 export function Sidebar() {
   return (
     <aside className="h-screen w-16 md:w-20 bg-green-300 text-white flex flex-col items-center py-6 justify-between fixed left-0 top-0 z-50">
-      {/* Top logo */}
       <div className="flex items-center justify-center w-full h-16 bg-green-300">
         <Image
           src="/assets/Vector.svg"
@@ -15,15 +17,19 @@ export function Sidebar() {
         />
       </div>
 
-      {/* Middle nav icons */}
+      {/* Ícones de navegação agora são links */}
       <div className="flex flex-col items-center gap-6">
-        <SidebarIcon icon={<Home size={24} />} label="Dashboard" />
+        <Link href="/">
+          <SidebarIcon icon={<Home size={24} />} label="Dashboard" />
+        </Link>
         <SidebarIcon icon={<ListChecks size={24} />} label="Tarefas" />
-        <SidebarIcon icon={<Leaf size={24} />} label="Cultivo" />
+        {/* 2. Adiciona o Link para a página de culturas */}
+        <Link href="/culturas">
+          <SidebarIcon icon={<Leaf size={24} />} label="Cultivo" />
+        </Link>
         <SidebarIcon icon={<Users size={24} />} label="Equipe" />
       </div>
 
-      {/* Bottom settings */}
       <div className="flex flex-col items-center gap-6 mb-6">
         <SidebarIcon icon={<Settings size={24} />} label="Configurações" />
         <SidebarIcon icon={<LogOut size={24} />} label="Sair" />

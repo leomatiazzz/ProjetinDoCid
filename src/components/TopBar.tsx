@@ -16,7 +16,7 @@ export function TopBar() {
   }, [darkMode]);
 
   return (
-    <header className="ml-16 md:ml-20 px-6 py-4 flex items-center justify-between bg-yellow-100 text-black shadow-sm sticky top-0 z-40">
+    <header className="px-6 py-4 flex items-center justify-between bg-yellow-100 text-black shadow-sm sticky top-0 z-40">
       <div className="text-xl font-semibold">Bom dia, Leo!</div>
 
       <div className="flex items-center gap-4">

@@ -24,7 +24,7 @@ const data = [
 
 export function SensorChart() {
   return (
-    <section className="ml-16 md:ml-20 px-6 mt-10 max-w-6xl">
+    <section className="px-6 mt-10 max-w-6xl">
       <h2 className="text-lg font-semibold text-gray-800 mb-4">
         Atividade dos Sensores
         <span className="text-sm text-gray-500"> (Últimos 7 dias)</span>

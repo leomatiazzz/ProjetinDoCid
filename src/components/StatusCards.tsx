@@ -13,7 +13,14 @@ interface StatusCardProps {
   timestamp: string;
 }
 
-function StatusCard({ icon, title, value, status, bgColor, timestamp }: StatusCardProps) {
+function StatusCard({
+  icon,
+  title,
+  value,
+  status,
+  bgColor,
+  timestamp,
+}: StatusCardProps) {
   return (
     <div
       className={`flex flex-col gap-1 p-4 rounded-lg shadow-md w-full max-w-[200px] ${bgColor}`}
@@ -24,7 +31,7 @@ function StatusCard({ icon, title, value, status, bgColor, timestamp }: StatusCa
       </div>
       <div className="text-3xl font-bold text-gray-800 mt-1">{value}</div>
       <div className="text-xs text-gray-600">{status}</div>
-      
+
       {/* CORRIGIDO: Removida a legenda "Última coleta:" */}
       <div className="mt-3 pt-2 border-t border-black/10 text-xs text-gray-500">
         <span>{timestamp}</span>

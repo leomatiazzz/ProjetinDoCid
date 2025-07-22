@@ -21,7 +21,9 @@ export function TopBar() {
   return (
     <header className="px-6 py-4 flex items-center justify-between bg-yellow-100 text-black shadow-sm sticky top-0 z-40">
       {/* 3. Exibe o nome do utilizador dinamicamente */}
-      <div className="text-xl font-semibold">Bom dia, {user || "Utilizador"}!</div>
+      <div className="text-xl font-semibold">
+        Bom dia, {user || "Utilizador"}!
+      </div>
 
       <div className="flex items-center gap-4">
         <button

@@ -1,16 +1,11 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class", // permite ativar o modo noturno por classe
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}", // varre os arquivos dentro de /src
-  ],
+  darkMode: "class", // ← Importante
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {
-      colors: {
-        primary: "#E9AC28", // sua cor amarela personalizada
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

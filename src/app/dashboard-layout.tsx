@@ -16,9 +16,7 @@ export default function DashboardLayout({
       <main className="ml-16 md:ml-20">
         <TopBar />
         {/* O conteúdo da página (children) será inserido aqui com um padding */}
-        <div className="p-4 md:p-8">
-          {children}
-        </div>
+        <div className="p-4 md:p-8">{children}</div>
       </main>
     </div>
   );

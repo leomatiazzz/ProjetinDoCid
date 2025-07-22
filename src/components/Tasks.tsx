@@ -1,11 +1,18 @@
-// Localização: src/components/Tasks.tsx (ATUALIZADO)
-
+// src/components/Tasks.tsx
 "use client";
 
+import { useState } from "react";
 import { PlusCircle } from "lucide-react";
 
+interface Task {
+  id: number;
+  name: string;
+  time: string;
+  completed: boolean;
+}
+
 export function Tasks() {
-  const tasks = [
+  const [tasks, setTasks] = useState<Task[]>([
     {
       id: 1,
       name: "Fertilizar campo A",
@@ -24,15 +31,21 @@ export function Tasks() {
       time: "Amanhã - 09:30",
       completed: false,
     },
-  ];
+  ]);
+
+  const toggleTaskCompletion = (id: number) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
 
   const handleCreateRoutine = () => {
-    // A lógica para abrir um modal ou navegar para uma nova página viria aqui
     alert("Funcionalidade para criar uma nova rotina a ser implementada!");
   };
 
   return (
-    // CORRIGIDO: Removi a classe "px-6" para que o alinhamento seja controlado pelo layout pai.
     <section className="w-full">
       <h2 className="text-lg font-semibold text-gray-800 mb-4">
         Rotina do Robô
@@ -54,14 +67,13 @@ export function Tasks() {
             <input
               type="checkbox"
               checked={task.completed}
-              readOnly
-              className="w-5 h-5"
+              onChange={() => toggleTaskCompletion(task.id)}
+              className="w-5 h-5 cursor-pointer"
             />
           </li>
         ))}
       </ul>
 
-      {/* Botão para criar uma nova rotina */}
       <div className="mt-6 flex justify-end">
         <button
           onClick={handleCreateRoutine}

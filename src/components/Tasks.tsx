@@ -1,4 +1,8 @@
+// Localização: src/components/Tasks.tsx (ATUALIZADO)
+
 "use client";
+
+import { PlusCircle } from "lucide-react";
 
 export function Tasks() {
   const tasks = [
@@ -22,10 +26,16 @@ export function Tasks() {
     },
   ];
 
+  const handleCreateRoutine = () => {
+    // A lógica para abrir um modal ou navegar para uma nova página viria aqui
+    alert("Funcionalidade para criar uma nova rotina a ser implementada!");
+  };
+
   return (
-    <section className="ml-16 md:ml-20 px-6 mt-10 max-w-xl">
+    // CORRIGIDO: Removi a classe "px-6" para que o alinhamento seja controlado pelo layout pai.
+    <section className="w-full">
       <h2 className="text-lg font-semibold text-gray-800 mb-4">
-        Tarefas Pendentes
+        Rotina do Robô
       </h2>
       <ul className="space-y-3">
         {tasks.map((task) => (
@@ -50,6 +60,17 @@ export function Tasks() {
           </li>
         ))}
       </ul>
+
+      {/* Botão para criar uma nova rotina */}
+      <div className="mt-6 flex justify-end">
+        <button
+          onClick={handleCreateRoutine}
+          className="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-700 transition-colors duration-300 flex items-center justify-center gap-2"
+        >
+          <PlusCircle size={20} />
+          Criar nova rotina
+        </button>
+      </div>
     </section>
   );
 }

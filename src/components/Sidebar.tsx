@@ -24,7 +24,6 @@ export function Sidebar() {
         <Link href="/">
           <SidebarIcon icon={<Home size={24} />} label="Dashboard" />
         </Link>
-        {/* AQUI A MUDANÇA: Adicionado Link para a página de tarefas */}
         <Link href="/tarefas">
           <SidebarIcon icon={<ListChecks size={24} />} label="Tarefas" />
         </Link>
@@ -35,7 +34,10 @@ export function Sidebar() {
       </div>
 
       <div className="flex flex-col items-center gap-6 mb-6">
-        <SidebarIcon icon={<Settings size={24} />} label="Configurações" />
+        {/* AQUI A MUDANÇA: Adicionado Link para a página de configurações */}
+        <Link href="/configuracoes">
+          <SidebarIcon icon={<Settings size={24} />} label="Configurações" />
+        </Link>
         <div onClick={logout} className="cursor-pointer">
           <SidebarIcon icon={<LogOut size={24} />} label="Sair" />
         </div>
@@ -44,6 +46,7 @@ export function Sidebar() {
   );
 }
 
+// ... (o resto do componente SidebarIcon continua o mesmo)
 interface SidebarIconProps {
   icon: React.ReactNode;
   label: string;

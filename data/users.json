@@ -13,5 +13,10 @@
     "usuario": "Leo",
     "email": "leo@teste.com",
     "senha": "darknight123"
+  },
+  {
+    "usuario": "Darlyson",
+    "email": "darlyson@teste.com",
+    "senha": "igor123"
   }
 ]

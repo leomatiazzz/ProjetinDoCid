@@ -25,7 +25,7 @@ export function Tasks() {
   return (
     <section className="ml-16 md:ml-20 px-6 mt-10 max-w-xl">
       <h2 className="text-lg font-semibold text-gray-800 mb-4">
-        Upcoming Tasks
+        Tarefas Pendentes
       </h2>
       <ul className="space-y-3">
         {tasks.map((task) => (

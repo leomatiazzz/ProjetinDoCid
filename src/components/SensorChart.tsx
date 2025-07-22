@@ -26,7 +26,8 @@ export function SensorChart() {
   return (
     <section className="ml-16 md:ml-20 px-6 mt-10 max-w-6xl">
       <h2 className="text-lg font-semibold text-gray-800 mb-4">
-        Sensor Activity
+        Atividade dos Sensores
+        <span className="text-sm text-gray-500"> (Últimos 7 dias)</span>
       </h2>
       <div className="bg-white rounded-lg shadow-md p-4">
         <ResponsiveContainer width="100%" height={300}>
@@ -37,24 +38,24 @@ export function SensorChart() {
             <Tooltip />
             <Legend />
             <Bar
-              dataKey="moisture"
+              dataKey="umidade"
               barSize={20}
               fill="#60a5fa"
-              name="Soil Moisture (%)"
+              name="Umidade do Solo (%)"
             />
             <Line
               type="monotone"
               dataKey="temp"
               stroke="#f59e0b"
               strokeWidth={2}
-              name="Air Temp (°C)"
+              name="Temperatura do Ar (°C)"
             />
             <Line
               type="monotone"
               dataKey="wind"
               stroke="#10b981"
               strokeDasharray="5 5"
-              name="Wind Speed (km/h)"
+              name="Velocidade do Vento (km/h)"
             />
           </ComposedChart>
         </ResponsiveContainer>

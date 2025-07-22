@@ -1,18 +1,19 @@
 "use client";
 import { Droplet, Thermometer, Wind } from "lucide-react";
+import React from "react";
 
 interface StatusCardProps {
   icon: React.ReactNode;
   title: string;
   value: string;
   status: string;
-  color: string;
+  bgColor: string; // usar a classe do Tailwind completa
 }
 
-function StatusCard({ icon, title, value, status, color }: StatusCardProps) {
+function StatusCard({ icon, title, value, status, bgColor }: StatusCardProps) {
   return (
     <div
-      className={`flex flex-col gap-1 p-4 rounded-md shadow-md bg-${color}-100 w-full max-w-[180px]`}
+      className={`flex flex-col gap-1 p-4 rounded-md shadow-md w-full max-w-[180px] ${bgColor}`}
     >
       <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
         {icon}
@@ -26,27 +27,27 @@ function StatusCard({ icon, title, value, status, color }: StatusCardProps) {
 
 export function StatusCards() {
   return (
-    <section className="ml-16 md:ml-20 px-6 mt-6 flex gap-4 flex-wrap">
+    <section className="flex justify-center flex-wrap gap-4 px-6 mt-6 w-full">
       <StatusCard
         icon={<Droplet size={16} />}
         title="Umidade do solo"
         value="72%"
         status="Alto"
-        color="verde"
+        bgColor="bg-green-200"
       />
       <StatusCard
         icon={<Thermometer size={16} />}
         title="Temperatura do ar"
         value="24 °C"
         status="Normal"
-        color="amarelo"
+        bgColor="bg-lime-200" // amarelo esverdeado
       />
       <StatusCard
         icon={<Wind size={16} />}
         title="Velocidade do vento"
         value="3km/h"
         status="Normal"
-        color="azul"
+        bgColor="bg-blue-200"
       />
     </section>
   );

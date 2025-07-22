@@ -1,7 +1,6 @@
 import { Sidebar } from "@/components/Sidebar";
 import { TopBar } from "@/components/TopBar";
 import { StatusCards } from "@/components/StatusCards";
-import { FieldMap } from "@/components/FieldMap";
 import { Tasks } from "@/components/Tasks";
 import { SensorChart } from "@/components/SensorChart";
 
@@ -11,7 +10,6 @@ export default function HomePage() {
       <Sidebar />
       <TopBar />
       <StatusCards />
-      <FieldMap />
       <Tasks />
       <SensorChart />
     </main>

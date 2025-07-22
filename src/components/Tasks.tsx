@@ -1,4 +1,4 @@
-// src/components/Tasks.tsx
+// src/components/Tasks.tsx (ATUALIZADO)
 "use client";
 
 import { useState } from "react";
@@ -12,24 +12,55 @@ interface Task {
 }
 
 export function Tasks() {
+  // Lista de tarefas expandida com mais exemplos
   const [tasks, setTasks] = useState<Task[]>([
     {
       id: 1,
-      name: "Fertilizar campo A",
+      name: "Fertilizar campo de Soja (Setor A)",
       time: "Hoje - 08:00",
       completed: false,
     },
     {
       id: 2,
-      name: "Inspecionar sensores",
+      name: "Inspecionar sensores de umidade",
       time: "Hoje - 14:00",
       completed: true,
     },
     {
       id: 3,
-      name: "Verificar irrigação",
+      name: "Verificar sistema de irrigação do Milho",
       time: "Amanhã - 09:30",
       completed: false,
+    },
+    {
+      id: 4,
+      name: "Monitorar pragas no campo de Algodão",
+      time: "Hoje - 11:00",
+      completed: false,
+    },
+    {
+      id: 5,
+      name: "Coletar amostras de solo (Setor B)",
+      time: "Amanhã - 15:00",
+      completed: false,
+    },
+    {
+      id: 6,
+      name: "Recalibrar câmera térmica",
+      time: "Ontem - 17:00",
+      completed: true,
+    },
+    {
+      id: 7,
+      name: "Aplicar herbicida seletivo no campo de Café",
+      time: "24/07 - 10:00",
+      completed: false,
+    },
+    {
+      id: 8,
+      name: "Verificar previsão do tempo para os próximos 3 dias",
+      time: "Hoje - 07:00",
+      completed: true,
     },
   ]);
 

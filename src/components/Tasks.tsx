@@ -1,4 +1,3 @@
-// src/components/Tasks.tsx (ATUALIZADO)
 "use client";
 
 import { useState } from "react";
@@ -12,7 +11,6 @@ interface Task {
 }
 
 export function Tasks() {
-  // Lista de tarefas expandida com mais exemplos
   const [tasks, setTasks] = useState<Task[]>([
     {
       id: 1,

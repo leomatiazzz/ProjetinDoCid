@@ -1,4 +1,3 @@
-// src/components/SensorChart.tsx (CORRIGIDO)
 "use client";
 import {
   ComposedChart,
@@ -24,7 +23,6 @@ const data = [
 
 export function SensorChart() {
   return (
-    // A classe 'mt-10' foi removida para um melhor alinhamento na nova grade
     <section className="px-6 max-w-6xl">
       <h2 className="text-lg font-semibold text-gray-800 mb-4">
         Atividade dos Sensores
@@ -38,11 +36,9 @@ export function SensorChart() {
             <YAxis />
             <Tooltip />
             <Legend />
-            {/* AQUI ESTÁ A CORREÇÃO: 
-              O `dataKey` foi alterado de "umidade" para "moisture" para corresponder aos dados.
-            */}
+            {/**/}
             <Bar
-              dataKey="moisture" // <<< ALTERADO AQUI
+              dataKey="moisture"
               barSize={20}
               fill="#60a5fa"
               name="Umidade do Solo (%)"

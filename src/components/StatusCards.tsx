@@ -1,11 +1,8 @@
-// Localização: src/components/StatusCards.tsx (ATUALIZADO)
-
 "use client";
-// 1. Importe o ícone 'Sun' para a luminosidade
+
 import { Droplet, Thermometer, Wind, Sun } from "lucide-react";
 import React from "react";
 
-// A interface do componente não precisa de mudanças
 interface StatusCardProps {
   icon: React.ReactNode;
   title: string;
@@ -23,7 +20,6 @@ function StatusCard({
   bgColor,
   timestamp,
 }: StatusCardProps) {
-  // ... (o código interno do StatusCard continua o mesmo)
   return (
     <div
       className={`flex flex-col gap-1 p-4 rounded-lg shadow-md w-full max-w-[200px] ${bgColor}`}
@@ -69,7 +65,7 @@ export function StatusCards() {
         bgColor="bg-blue-200"
         timestamp="21/07 às 21:55"
       />
-      {/* 2. Adicione o novo Card de Luminosidade aqui */}
+      {/**/}
       <StatusCard
         icon={<Sun size={16} />}
         title="Luminosidade"

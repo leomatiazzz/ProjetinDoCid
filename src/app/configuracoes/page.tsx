@@ -1,13 +1,10 @@
-// Localização: src/app/configuracoes/page.tsx (FINALIZADO)
-
 "use client";
 
 import { useState, useEffect } from "react";
-import DashboardLayout from "@/app/dashboard-layout"; // Corrigido o caminho do import
+import DashboardLayout from "@/app/dashboard-layout";
 import { useAuth } from "@/contexts/AuthContext";
 import Button from "@/components/Button";
 
-// Tipos para os nossos dados estáticos
 type Sector = {
   id: string;
   nome: string;
@@ -15,7 +12,6 @@ type Sector = {
   statusRobo: "Ocioso" | "Sensoriando" | "Em movimento";
 };
 
-// Simulação de dados de usuários que estariam em um banco de dados
 const usersData = [
   { usuario: "admin", email: "admin@example.com" },
   { usuario: "Igor", email: "igor@gmail.com" },
@@ -27,11 +23,9 @@ const culturasDisponiveis = ["Soja", "Milho", "Algodão", "Café", "Nenhuma"];
 export default function ConfiguracoesPage() {
   const { user, isAuthenticated, isLoading } = useAuth();
 
-  // Estados para os campos do formulário
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
 
-  // Efeito para carregar os dados do usuário dinamicamente quando o componente montar
   useEffect(() => {
     if (user) {
       const currentUserData = usersData.find((u) => u.usuario === user);
@@ -40,7 +34,7 @@ export default function ConfiguracoesPage() {
         currentUserData ? currentUserData.email : "email@naoencontrado.com"
       );
     }
-  }, [user]); // Roda sempre que o 'user' do contexto mudar
+  }, [user]);
 
   const [notificacoes, setNotificacoes] = useState({
     bateria: true,
@@ -90,7 +84,7 @@ export default function ConfiguracoesPage() {
           </h2>
           <form className="space-y-4">
             <div>
-              {/* CORREÇÃO DA FONTE: Deixando o label mais escuro e em negrito */}
+              {/* Label negrito */}
               <label
                 htmlFor="nome"
                 className="block text-sm font-semibold text-gray-800"
@@ -106,7 +100,7 @@ export default function ConfiguracoesPage() {
               />
             </div>
             <div>
-              {/* CORREÇÃO DA FONTE: Deixando o label mais escuro e em negrito */}
+              {/* Label negrito */}
               <label
                 htmlFor="email"
                 className="block text-sm font-semibold text-gray-800"
@@ -198,7 +192,7 @@ export default function ConfiguracoesPage() {
               >
                 <div className="font-semibold text-gray-800">{setor.nome}</div>
                 <div>
-                  {/* CORREÇÃO DA FONTE: Deixando o label mais escuro e em negrito */}
+                  {/* Label negrito */}
                   <label className="block text-xs font-semibold text-gray-800 mb-1">
                     Cultura Plantada
                   </label>
@@ -217,7 +211,7 @@ export default function ConfiguracoesPage() {
                   </select>
                 </div>
                 <div>
-                  {/* CORREÇÃO DA FONTE: Deixando o label mais escuro e em negrito */}
+                  {/* Label negrito */}
                   <label className="block text-xs font-semibold text-gray-800 mb-1">
                     Status do Robô
                   </label>

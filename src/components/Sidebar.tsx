@@ -1,5 +1,3 @@
-// Localização: src/components/Sidebar.tsx (ATUALIZADO)
-
 "use client";
 import { Home, ListChecks, Leaf, Users, Settings, LogOut } from "lucide-react";
 import Image from "next/image";
@@ -34,7 +32,7 @@ export function Sidebar() {
       </div>
 
       <div className="flex flex-col items-center gap-6 mb-6">
-        {/* AQUI A MUDANÇA: Adicionado Link para a página de configurações */}
+        {/* */}
         <Link href="/configuracoes">
           <SidebarIcon icon={<Settings size={24} />} label="Configurações" />
         </Link>
@@ -46,7 +44,6 @@ export function Sidebar() {
   );
 }
 
-// ... (o resto do componente SidebarIcon continua o mesmo)
 interface SidebarIconProps {
   icon: React.ReactNode;
   label: string;

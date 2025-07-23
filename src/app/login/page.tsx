@@ -1,6 +1,4 @@
-// Localização: src/app/login/page.tsx (ATUALIZADO)
-
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +15,6 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    // Validação removida: não verifica mais os termos
     if (!username || !password) {
       setError("Preencha todos os campos.");
       return;
@@ -64,8 +61,8 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               className="border px-4 py-2 rounded text-gray-900 placeholder-gray-500"
             />
-            
-            {/* REMOVIDO: Checkbox e legenda dos termos de uso */}
+
+            {/* Sem checkbox e legenda dos termos de uso */}
 
             {error && <p className="text-red-500 text-sm">{error}</p>}
             <button

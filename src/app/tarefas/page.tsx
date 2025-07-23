@@ -1,5 +1,3 @@
-// Localização: src/app/tarefas/page.tsx
-
 "use client";
 
 import DashboardLayout from "../dashboard-layout";
@@ -23,7 +21,7 @@ export default function TarefasPage() {
         <h1 className="text-3xl font-bold text-gray-900">
           Gerenciador de Tarefas do Robô
         </h1>
-        {/* Podemos reutilizar o componente Tasks ou criar um mais elaborado aqui */}
+        {/* */}
         <Tasks />
       </div>
     </DashboardLayout>

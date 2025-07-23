@@ -1,5 +1,3 @@
-// Localização: src/app/page.tsx (ATUALIZADO)
-
 "use client";
 
 import DashboardLayout from "./dashboard-layout";
@@ -21,19 +19,15 @@ export default function HomePage() {
 
   return (
     <DashboardLayout>
-      {/* Container principal alterado para uma grade com 3 colunas em telas grandes.
-        - A primeira parte (cards e gráfico) ocupará 2 colunas.
-        - A segunda parte (tarefas) ocupará 1 coluna.
-        - 'items-start' alinha os itens no topo da grade.
-      */}
+      {/* Container principal de grade com 3 colunas em telas grandes.*/}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-        {/* Coluna da Esquerda (ocupa 2 de 3 colunas) */}
+        {/* Coluna da Esquerda */}
         <div className="lg:col-span-2 flex flex-col gap-8">
           <StatusCards />
           <SensorChart />
         </div>
 
-        {/* Coluna da Direita (ocupa 1 de 3 colunas) */}
+        {/* Coluna da Direita */}
         <div className="lg:col-span-1">
           <Tasks />
         </div>

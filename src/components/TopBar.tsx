@@ -1,12 +1,9 @@
-// Localização: src/components/TopBar.tsx (ATUALIZADO)
-
 "use client";
 import { Bell, Search, Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 
-// Dados de exemplo para busca e notificações
 const searchItems = [
   { id: 1, name: "Dashboard", url: "/" },
   { id: 2, name: "Culturas", url: "/culturas" },

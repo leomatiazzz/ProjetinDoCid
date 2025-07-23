@@ -1,6 +1,4 @@
-// Localização: src/app/register/page.tsx (ATUALIZADO)
-
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -21,9 +19,9 @@ export default function Register() {
       return;
     }
 
-    const res = await fetch('/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ usuario, email, senha }),
     });
 
@@ -32,14 +30,13 @@ export default function Register() {
       router.push("/login");
     } else {
       const data = await res.json();
-      alert(`Erro ao registar: ${data.error || 'Tente novamente.'}`);
+      alert(`Erro ao registar: ${data.error || "Tente novamente."}`);
     }
   };
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-green-200 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-5xl bg-white rounded-xl shadow-lg overflow-hidden">
-        
         <div className="flex flex-col items-center justify-center p-10 bg-white">
           <Image
             src="/logo.png"
@@ -52,7 +49,8 @@ export default function Register() {
             Bem-vindo ao Projeto CID
           </h1>
           <p className="text-center text-gray-700 max-w-sm">
-            Cadastre-se para acessar uma plataforma moderna, sustentável e segura.
+            Cadastre-se para acessar uma plataforma moderna, sustentável e
+            segura.
           </p>
         </div>
 
